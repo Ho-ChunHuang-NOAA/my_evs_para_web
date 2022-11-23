@@ -267,6 +267,11 @@ variables.push({
         displayName: "1HR-AVG PM25",
         name: "PM25",
 });
+variables.push({
+        displayName: "24HR-AVG PM25",
+	/* name: "ozcon1", */
+        name: "PMAVE",
+});
 
 
 

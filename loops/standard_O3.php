@@ -271,6 +271,12 @@ variables.push({
 	/* name: "ozcon1", */
         name: "O3",
 });
+variables.push({
+        displayName: "Max 8HR-AVG O3",
+	/* name: "ozmax8", */
+        name: "OZMAX8",
+});
+
 
 
 

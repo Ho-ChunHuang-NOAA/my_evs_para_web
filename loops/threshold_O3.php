@@ -252,14 +252,6 @@ mtypes.push({
         displayName: "PERFORMANCE",
         name: "PERFORMANCE",
 });
-mtypes.push({
-        displayName: "Taylor Diagram",
-        name: "TAYLOR",
-});
-mtypes.push({
-        displayName: "mean vs valid Time",
-        name: "TIME_SERIES",
-});
 
 
 
