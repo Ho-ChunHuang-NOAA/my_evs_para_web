@@ -67,7 +67,7 @@
 The Community Multiscale Air Quality (CMAQ) modeling system combines current knowledge of atmospheric science and air quality modeling with multi-processor computing techniques to deliver fast, technically sound estimates of ozone (O<sub>3</sub>) and particulate matter (PM<sub>2.5</sub>).
 <br>
 <br>
-<a style="color:#ff0000">This webpage provides information on <u>operational CMAQ forecast skill</u>.
+<a style="color:#ff0000">This webpage provides information on <u>operational and developmental CMAQ forecast skill</u>.
 <br>
 Please use the links on the left to navigate to CMAQ verification statistics.</a> 
 <br>
