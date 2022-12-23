@@ -267,34 +267,6 @@ variables.push({
 
 
 seasons.push({
-        displayName: "Current",
-        name: "current",
-});
-seasons.push({
-	displayName: "Summer Case",
-        name: "sum",
-});
-seasons.push({
-	displayName: "Winter Case",
-        name: "win",
-});
-seasons.push({
-	displayName: "Wild Fire Case",
-        name: "fire",
-});
-seasons.push({
-	displayName: "Last 30 days",
-        name: "last30days",
-});
-seasons.push({
-	displayName: "Last 60 days",
-        name: "last60days",
-});
-seasons.push({
-	displayName: "Last 90 days",
-        name: "last90days",
-});
-seasons.push({
 	displayName: "January",
         /* name: "jan", */
         name: "01",
@@ -303,26 +275,6 @@ seasons.push({
         displayName: "February",
         /* name: "feb", */
         name: "02",
-});
-seasons.push({
-        displayName: "March",
-        /* name: "mar", */
-        name: "03",
-});
-seasons.push({
-        displayName: "April",
-        /* name: "apr", */
-        name: "04",
-});
-seasons.push({
-        displayName: "May",
-        /* name: "may", */
-        name: "05",
-});
-seasons.push({
-        displayName: "June",
-        /* name: "jun", */
-        name: "06",
 });
 seasons.push({
         displayName: "July",
@@ -339,42 +291,14 @@ seasons.push({
         /* name: "sep", */
         name: "09",
 });
-seasons.push({
-        displayName: "October",
-	/* /* name: "oct", */
-        name: "10",
-});
-seasons.push({
-        displayName: "November",
-	/* /* name: "nov", */
-        name: "11",
-});
-seasons.push({
-        displayName: "December",
-        /* name: "dec", */
-        name: "12",
-});
-
-
-
-
-
 
 annuals.push({
         displayName: "2022",
         name: "2022",
 });
 annuals.push({
-        displayName: "2021",
-        name: "2021",
-});
-annuals.push({
         displayName: "2020",
         name: "2020",
-});
-annuals.push({
-        displayName: "2019",
-        name: "2019",
 });
 
 
@@ -468,7 +392,7 @@ function initialize(){
 	imageObj = {
 		domain: "CONUS_South",
 		variable: "PMAVE",
-                season: "11",
+                season: "07",
                 annual: "2022",
                 initcyc: "12Z",
                 fcstday: "DAY2",
