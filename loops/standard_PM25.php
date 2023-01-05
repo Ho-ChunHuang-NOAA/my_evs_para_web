@@ -306,6 +306,10 @@ seasons.push({
 
 
 annuals.push({
+        displayName: "2023",
+        name: "2023",
+});
+annuals.push({
         displayName: "2022",
         name: "2022",
 });
