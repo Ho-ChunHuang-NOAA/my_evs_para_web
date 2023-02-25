@@ -257,40 +257,52 @@ mtypes.push({
 
 variables.push({
         displayName: "Max 8HR-AVG O3",
-	/* name: "ozcon1", */
         name: "OZMAX8",
 });
 
 
 
 seasons.push({
+        displayName: "Summer",
+        name: "sum",
+});
+seasons.push({
+        displayName: "Winter",
+        name: "win",
+});
+seasons.push({
+        displayName: "Fire",
+        name: "fire",
+});
+seasons.push({
 	displayName: "January",
-        /* name: "jan", */
         name: "01",
 });
 seasons.push({
         displayName: "February",
-        /* name: "feb", */
         name: "02",
 });
 seasons.push({
+        displayName: "June",
+        name: "06",
+});
+seasons.push({
         displayName: "July",
-        /* name: "jul", */
         name: "07",
 });
 seasons.push({
         displayName: "August",
-        /* name: "aug", */
         name: "08",
 });
 seasons.push({
         displayName: "September",
-        /* name: "sep", */
         name: "09",
 });
-
-
-
+seasons.push({
+        displayName: "December",
+        /* name: "Nov", */
+        name: "12",
+});
 
 
 annuals.push({
@@ -301,6 +313,10 @@ annuals.push({
 annuals.push({
         displayName: "2022",
         name: "2022",
+});
+annuals.push({
+        displayName: "2021",
+        name: "2021",
 });
 annuals.push({
         displayName: "2020",
@@ -396,9 +412,9 @@ function initialize(){
 	
 	//Set image object based on default variables
 	imageObj = {
-		domain: "CONUS_South",
+		domain: "CONUS_East",
 		variable: "OZMAX8",
-                season: "07",
+                season: "sum",
                 annual: "2022",
                 initcyc: "12Z",
                 fcstday: "DAY2",

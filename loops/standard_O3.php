@@ -248,6 +248,14 @@ levels.push({
 
 
 mtypes.push({
+        displayName: "RAW mean vs valid Time",
+        name: "TIME_SERIES_RAW",
+});
+mtypes.push({
+        displayName: "BC mean vs valid Time",
+        name: "TIME_SERIES_BC",
+});
+mtypes.push({
         displayName: "mean vs valid Time",
         name: "TIME_SERIES",
 });
@@ -268,12 +276,10 @@ mtypes.push({
 
 variables.push({
         displayName: "1HR-AVG O3",
-	/* name: "ozcon1", */
         name: "O3",
 });
 variables.push({
         displayName: "Max 8HR-AVG O3",
-	/* name: "ozmax8", */
         name: "OZMAX8",
 });
 
@@ -283,31 +289,46 @@ variables.push({
 
 
 seasons.push({
+        displayName: "Summer",
+        name: "sum",
+});
+seasons.push({
+        displayName: "Winter",
+        name: "win",
+});
+seasons.push({
+        displayName: "Fire",
+        name: "fire",
+});
+seasons.push({
 	displayName: "January",
-        /* name: "jan", */
         name: "01",
 });
 seasons.push({
         displayName: "February",
-        /* name: "feb", */
         name: "02",
 });
 seasons.push({
+        displayName: "June",
+        name: "06",
+});
+seasons.push({
         displayName: "July",
-        /* name: "jul", */
         name: "07",
 });
 seasons.push({
         displayName: "August",
-        /* name: "aug", */
         name: "08",
 });
 seasons.push({
         displayName: "September",
-        /* name: "sep", */
         name: "09",
 });
-
+seasons.push({
+        displayName: "December",
+        /* name: "Nov", */
+        name: "12",
+});
 
 
 
@@ -318,6 +339,10 @@ annuals.push({
 annuals.push({
         displayName: "2022",
         name: "2022",
+});
+annuals.push({
+        displayName: "2021",
+        name: "2021",
 });
 annuals.push({
         displayName: "2020",
@@ -413,13 +438,13 @@ function initialize(){
 	
 	//Set image object based on default variables
 	imageObj = {
-		domain: "CONUS_South",
+		domain: "CONUS_East",
 		variable: "O3",
-                season: "07",
+                season: "sum",
                 annual: "2022",
                 initcyc: "12Z",
                 fcstday: "DAY2",
-		mtype: "TIME_SERIES",
+		mtype: "TIME_SERIES_RAW",
 // 		level: "OZMAX8",
 // 		period: "I",
 //                frame: startFrame,
