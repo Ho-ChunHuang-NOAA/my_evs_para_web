@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CMAQ Homepage</title>
+<title>AQMHomepage</title>
 <link rel="stylesheet" type="text/css" href="main.css">
 <script src="jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="functions.js"></script>
@@ -16,7 +16,7 @@
 
 <!-- Head element -->
 <div class="page-top">
-	<span><a style="color:#ffffff">COMMUNITY MULTISCALE AIR QUALITY (CMAQ) MODELING SYSTEM</a></span>
+	<span><a style="color:#ffffff">NCEP REGIONAL AIR QUALITY MODELING SYSTEM</a></span>
 </div>
 
 <!-- Top menu -->
@@ -64,17 +64,17 @@
 <img src="../../../../style/images/cmaq_logo.png" alt="" width="150" />
 <br>
 <br>
-The Community Multiscale Air Quality (CMAQ) modeling system combines current knowledge of atmospheric science and air quality modeling with multi-processor computing techniques to deliver fast, technically sound estimates of ozone (O<sub>3</sub>) and particulate matter (PM<sub>2.5</sub>).
+The NCEP regional air quality modeling (AQM) system combines current knowledge of atmospheric science and air quality modeling with multi-processor computing techniques to deliver fast, technically sound estimates of ozone (O<sub>3</sub>) and particulate matter (PM<sub>2.5</sub>).
 <br>
 <br>
-<a style="color:#ff0000">This webpage provides information on <u>operational and developmental CMAQ forecast skill</u>.
+<a style="color:#ff0000">This webpage provides information on <u>operational and developmental AQM forecast skill</u>.
 <br>
-Please use the links on the left to navigate to CMAQ verification statistics.</a> 
+Please use the links on the left to navigate to AQM verification statistics.</a> 
 <br>
 <br>
 <b>Additional Information:</b>
 <br>
-CMAQ is an active open-source development project of the U.S. Environmental Protection Agency <a href=https://www.epa.gov/ target="_blank">(EPA)</a> and, although not verified here, can also forecast toxins and acid deposition.<br>You can learn more about CMAQ <a href=https://www.epa.gov/cmaq/cmaq-models-0 target="_blank">here</a>. 
+NCEP regional AQM incorporates some components of the US EPA Community Multiscale Air Quality (CMAQ) modeling system.  CMAQ is an active open-source development project of the U.S. Environmental Protection Agency <a href=https://www.epa.gov/ target="_blank">(EPA)</a> and, although not verified here, can also forecast toxins and acid deposition.<br>You can learn more about CMAQ <a href=https://www.epa.gov/cmaq/cmaq-models-0 target="_blank">here</a>. 
 </center>
 </div>
 </body>

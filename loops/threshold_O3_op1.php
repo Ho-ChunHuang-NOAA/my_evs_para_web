@@ -6,13 +6,11 @@
 <title>AQM</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="functions_aqm_op2.js"></script>
+<script type="text/javascript" src="functions_aqm_op1.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-
-<!-- This option limits the user's choice of the YR-Monts they can review  -->
 
 
 
@@ -28,6 +26,11 @@
                 <span class="bold">Time Period:</span>
                 <select id="annual" onchange="changeAnnual(this.value);"></select>
         </div> 
+
+        <div class="element">
+                <span class="bold">Month:</span>
+                <select id="season" onchange="changeSeason(this.value)"></select>
+        </div>
         <div class="element">
                 <span class="bold">Init Cycle:</span>
                 <select id="initcyc" onchange="changeInitcyc(this.value)"></select>
@@ -51,10 +54,6 @@
         <!-- <div class="element">
                 <span class="bold">Variable:</span>
                 <select id="level" onchange="changeLevel(this.value)"></select>
-        </div>
-        <div class="element">
-                <span class="bold">Month:</span>
-                <select id="season" onchange="changeSeason(this.value)"></select>
         </div>
         <div class="element">
                 <span class="bold">Map Type:</span>
@@ -139,11 +138,9 @@ format (e.g. XX = 00, 06, 12 --- XXX = 000, 006, 012).
 /* var url = "https://www.emc.ncep.noaa.gov/mmb/aq/fvs/SSSYY/OZON-LLLSFC_VVVPPP_AQMDDD.gif";
 var url = "https://www.emc.ncep.noaa.gov/mmb/hchuang/ftp/CONUS_CMAQ_PM25_TIME_SERIES_DAY2_12Z_202210.png";
 DDD is domain, VVV is plotting variable, MMM is the mtype and map type, FDY the FCSt DAY, initcyc is the init run cycle, YY is year and SSS is month or season */
-var url = "https://www.emc.ncep.noaa.gov/mmb/hchuang/evs_verif/AA/CCC/DDD_CMAQ_VVV_MMM_FDY_CYC_SSS.png";
+var url = "https://www.emc.ncep.noaa.gov/mmb/hchuang/evs_verif/AA/BBCCC/DDD_CMAQ_VVV_MMM_FDY_CYC_YYSSS.png";
 /* var url = "https://www.emc.ncep.noaa.gov/gmb/yluo/test/ECMWF/DDDzLLL_VVV_SSS.gif";
 var url = "https://www.emc.ncep.noaa.gov/mmb/gmanikin/fv3gfs/20180301/fv3_DDD_VVV_2018030100_0Y.png";
-var url = "https://www.emc.ncep.noaa.gov/mmb/hchuang/evs_verif/YY/YYSSS/DDD_CMAQ_VVV_MMM_FDY_CYC_YYSSS.png";
-var url = "https://www.emc.ncep.noaa.gov/mmb/hchuang/evs_verif/AA/BBCCC/DDD_CMAQ_VVV_MMM_FDY_CYC_YYSSS.png";
 var url = "https://www.emc.ncep.noaa.gov/users/Alicia.Bentley/fv3gefs/2018030100/images/DDD/mean_diff/VVV_Y.png"; */
 
 //====================================================================================================
@@ -259,12 +256,9 @@ mtypes.push({
 
 
 variables.push({
-        displayName: "24HR-AVG PM25",
-	/* name: "ozcon1", */
-        name: "PMAVE",
+        displayName: "Max 8HR-AVG O3",
+        name: "OZMAX8",
 });
-
-
 
 
 
@@ -282,32 +276,26 @@ seasons.push({
 });
 seasons.push({
 	displayName: "January",
-        /* name: "jan", */
         name: "01",
 });
 seasons.push({
         displayName: "February",
-        /* name: "feb", */
         name: "02",
 });
 seasons.push({
         displayName: "June",
-        /* name: "jun", */
         name: "06",
 });
 seasons.push({
         displayName: "July",
-        /* name: "jul", */
         name: "07",
 });
 seasons.push({
         displayName: "August",
-        /* name: "aug", */
         name: "08",
 });
 seasons.push({
         displayName: "September",
-        /* name: "sep", */
         name: "09",
 });
 seasons.push({
@@ -318,34 +306,22 @@ seasons.push({
 
 
 annuals.push({
-        displayName: "2020 Fire",
-        name: "202009",
-});
-annuals.push({
-        displayName: "2022 Summer",
-        name: "2022sum",
-});
-annuals.push({
-        displayName: "2023 winter",
-        name: "2023win",
-});
-annuals.push({
-        displayName: "2022 July",
-        name: "202207",
-});
-annuals.push({
-        displayName: "2022 August",
-        name: "202208",
-});
-annuals.push({
-        displayName: "2022 December",
-        name: "202212",
-});
-annuals.push({
-        displayName: "2023 January",
-        name: "202301",
+        displayName: "2023",
+        name: "2023",
 });
 
+annuals.push({
+        displayName: "2022",
+        name: "2022",
+});
+annuals.push({
+        displayName: "2021",
+        name: "2021",
+});
+annuals.push({
+        displayName: "2020",
+        name: "2020",
+});
 
 
 initcycs.push({
@@ -437,12 +413,12 @@ function initialize(){
 	//Set image object based on default variables
 	imageObj = {
 		domain: "CONUS_East",
-		variable: "PMAVE",
-                annual: "202009",
+		variable: "OZMAX8",
+                season: "sum",
+                annual: "2022",
                 initcyc: "12Z",
                 fcstday: "DAY2",
 		mtype: "CSI",
-//                season: "sum",
 // 		level: "OZMAX8",
 // 		period: "I",
 //                frame: startFrame,
@@ -477,10 +453,10 @@ function initialize(){
 	populateMenu('variable');
 	populateMenu('domain');
 	populateMenu('mtype');
+	populateMenu('season');
         populateMenu('annual');
 	populateMenu('initcyc');	
 	populateMenu('fcstday');	
-	// populateMenu('season');
 	// populateMenu('level');
 	// populateMenu('period');	
 	// populateMenu('maptype');	
