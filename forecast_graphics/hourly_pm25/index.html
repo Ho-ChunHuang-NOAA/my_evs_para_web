@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title> NCEP AQM PM GRAPHICS </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../script/style.css"></link>
+<script language="JavaScript" src="../script/verif_pm_latest.day.js"> </script> 
+<script language="JavaScript" src="../script/verif_cmaq_pm25.js"> </script> 
+<script language="JavaScript">
+
+</script>
+</head>
+                                                                                                                  
+<body  border=0 bgcolor="addbff"  text="000000" onLoad="javascript:load_image(document.form1)" >
+
+<img src="../images/noaa_logo.gif" height=60 width=65><img src="../images/nws_logo.gif" height=60 width=65><img src="../images/ncep_80.gif" height=55 width=75> 
+<font color="Blue" size=+3> &nbsp &nbsp &nbsp  AQM Hourly PM<sub>2.5</sub> for evaluation</font>
+
+<br> 
+
+<table bgcolor="AAAAAA" align="left">
+
+<tr bgcolor="AAAAAA" align="center" style="font-size:20px;"><td colspan=3>&nbsp</td>
+<td  bgcolor="CCCCCC"> 
+<a href="#picture" onClick="javascript:show(2)">03</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(5)">06</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(8)">09</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(11)">12</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(14)">15</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(17)">18</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(20)">21</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(23)">24</font></a>&nbsp 
+&nbsp &nbsp &nbsp &nbsp
+<a href="#picture" onClick="javascript:show(26)">27</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(29)">30</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(32)">33</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(35)">36</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(38)">39</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(41)">42</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(44)">45</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(47)">48</font></a>
+&nbsp &nbsp &nbsp &nbsp
+<a href="#picture" onClick="javascript:show(50)">51</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(53)">54</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(56)">57</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(59)">60</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(62)">63</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(65)">66</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(68)">69</font></a>&nbsp 
+<a href="#picture" onClick="javascript:show(71)">72</font></a>
+<br>
+</td>
+</tr>
+
+<tr><td colspan=3 bgcolor="AAAAAA">&nbsp</td>
+<td bgcolor="CCCCCC" align="center" style="font-size:20px;">
+<form name="form2">
+Select speed:
+<select name="spd" style="font-size:18px;">
+ <option selected>normal
+ <option>fast
+ <option>slow
+</select>
+&nbsp 
+Animation toggle <input  type="checkbox" name="timerBox" onClick="javascript:get_speed(this.form);javascript:rewind();javascript:get_i();javascript:animation()" style="width:20px;height:20px">
+
+&nbsp <button onclick="clearTimeout(anmiloop)" style="font-size:18px;">Stop</button> &nbsp &nbsp
+<!-- <button onclick="javascript:get_i();javascript:animation()" style="font-size:18px;">Continue</button> -->
+<!--&nbsp &nbsp &nbsp &nbsp-->
+
+<!-- Animation toggle <input  type="checkbox" name="timerBox"  onClick="javascript:get_speed(this.form);javascript:rewind();javascript:animation()"> -->
+<!-- Animation toggle <input  type="checkbox" name="timerBox"  onClick="javascript:get_speed(this.form);javascript:rewind();javascript:animation()"> -->
+
+
+ <input  type="button" name="fst" value="First" onClick="javascript:rewind()">
+ <input  type="button" name="prv" value="Prev" onClick="javascript:prev()">
+ <input  type="button" name="nxt" value="Next" onClick="javascript:next()">
+ <input  type="button" name="lst" value="Last" onClick="javascript:last()">
+</form>
+</td>
+</tr>
+
+<form name="form1">
+
+<tr bgcolor="AAAAAA">
+<td colspan=3></td>
+<td rowspan=30>
+<img src="http://www.emc.ncep.noaa.gov/mmb/hchuang/web/fig/2023/20230329/t06z/aqm.conus.prodobs.20230329.t06z.15.pm25.k1.png" name="cmaq1_pm_image" width=450 height=300>
+<img src="http://www.emc.ncep.noaa.gov/mmb/hchuang/web/fig/2023/20230329/t06z/aqm.conus.prodbcobs.20230329.t06z.15.pm25.k1.png" name="cmaq2_pm_image" width=450 height=300>
+<img src="http://www.emc.ncep.noaa.gov/mmb/hchuang/web/fig/2023/20230329/t06z/aqm.conus.v70c15obs.20230329.t06z.15.pm25.k1.png" name="cmaq3_pm_image" width=450 height=300>
+<img src="http://www.emc.ncep.noaa.gov/mmb/hchuang/web/fig/2023/20230329/t06z/aqm.conus.v70c15bcobs.20230329.t06z.15.pm25.k1.png" name="cmaq4_pm_image" width=450 height=300>
+</td>
+</tr>
+
+
+<tr bgcolor="CCCCCC"><td colspan=3><center> RUN # 1 Type:&nbsp &nbsp
+<select name="exp1" >
+<option value="prodobs" > AQMv6
+<option value="prodbcobs" > AQMv6 Bias-Corrected &nbsp &nbsp &nbsp &nbsp
+<option value="v70c55obs" > AQMv7
+<option value="v70c55bcobs" > AQMv7 Bias-Corrected
+</select>
+</td></tr>
+
+<tr bgcolor="CCCCCC"><td colspan=3><center> RUN # 2 Type:&nbsp &nbsp
+<select name="exp2" >
+<option value="prodbcobs" > AQMv6 Bias-Corrected &nbsp &nbsp &nbsp &nbsp
+<option value="v70c55obs" > AQMv7
+<option value="v70c55bcobs" > AQMv7 Bias-Corrected
+<option value="prodobs" > AQMv6
+</select>
+</td></tr>
+
+<tr bgcolor="CCCCCC"><td colspan=3><center> RUN # 3 Type:&nbsp &nbsp
+<select name="exp3" >
+<option value="v70c55obs" > AQMv7
+<option value="v70c55bcobs" > AQMv7 Bias-Corrected
+<option value="prodobs" > AQMv6
+<option value="prodbcobs" > AQMv6 Bias-Corrected &nbsp &nbsp &nbsp &nbsp
+</select>
+</td></tr>
+
+<tr bgcolor="CCCCCC"><td colspan=3><center> RUN # 4 Type:&nbsp &nbsp
+<select name="exp4" >
+<option value="v70c55bcobs" > AQMv7 Bias-Corrected
+<option value="prodobs" > AQMv6
+<option value="prodbcobs" > AQMv6 Bias-Corrected &nbsp &nbsp &nbsp &nbsp
+<option value="v70c55obs" > AQMv7
+</select>
+</td></tr>
+
+<tr bgcolor="CCCCCC" align="center"><td colspan=3> Region:&nbsp &nbsp
+<select name="rg" >
+<option value="conus" > Continental US
+<option value="east" > Eastern U.S. 
+<option value="ne" > Northeast U.S.
+<option value="se" > Southeast U.S.
+<option value="west" > Western U.S. 
+<option value="nw" > Northwest U.S.
+<option value="sw" > Southwest U.S.
+<option value="ak" > Alaska
+<option value="hi" > Hawaii
+</td>
+</tr>
+
+<!--  Value of earlier year listed first because in js file value[0] is used to count index for selected year values -->  
+<!--  Year values need to be in continuous listing to decide the index for selecting year values -->  
+<tr bgcolor="CCCCCC" align="center">
+     <td style="width:20px">
+      Year:
+      <select name="yr" >
+        <option value="2020"  > 2020
+        <option value="2021"  > 2021
+        <option value="2022"  > 2022
+        <option value="2023"  selected > 2023
+      </select>
+     </td>
+
+     <td style="width:40px">
+       Month:
+       <select name="mn" >
+       <option value="01"  > Jan
+       <option value="02"  > Feb
+       <option value="03"  selected > Mar
+       <option value="04"  > Apr
+       <option value="05"  > May
+       <option value="06"  > Jun
+       <option value="07"  > Jul
+       <option value="08"  > Aug
+       <option value="09"  > Sep
+       <option value="10"  > Oct
+       <option value="11"  > Nov
+       <option value="12"  > Dec
+       </select>
+     </td>
+
+     <td style="width:20px">
+       Day:
+       <select name="dy" >
+       <option value="01"  > 01
+       <option value="02"  > 02
+       <option value="03"  > 03
+       <option value="04"  > 04
+       <option value="05"  > 05
+       <option value="06"  > 06
+       <option value="07"  > 07
+       <option value="08"  > 08
+       <option value="09"  > 09
+       <option value="10"  > 10
+       <option value="11"  > 11
+       <option value="12"  > 12
+       <option value="13"  > 13
+       <option value="14"  > 14
+       <option value="15"  > 15
+       <option value="16"  > 16
+       <option value="17"  > 17
+       <option value="18"  > 18
+       <option value="19"  > 19
+       <option value="20"  > 20
+       <option value="21"  > 21
+       <option value="22"  > 22
+       <option value="23"  > 23
+       <option value="24"  > 24
+       <option value="25"  > 25
+       <option value="26"  > 26
+       <option value="27"  selected > 27
+       <option value="28"  > 28
+       <option value="29"  > 29
+       <option value="30"  > 30
+       <option value="31"  > 31
+       </select>
+     </td>
+</tr>
+
+<tr bgcolor="CCCCCC" align="center"><td colspan=3><input size=10 type="button" name="submit" value="Latest" onClick="load_image_latest()">&nbsp &nbsp <input size=10 type="button" name="submit" value="Day-1" onClick="load_imageM1(this.form)"> &nbsp &nbsp <input size=10 type="button" name="submit" value="Day+1" onClick="load_imageP1(this.form)"></td></tr>
+
+<tr bgcolor="CCCCCC" align="center"><td colspan=3> Select Cycle:&nbsp &nbsp
+<select name="tz" >
+<option value="06" selected> 06Z 
+<option value="12" > 12Z 
+</select>
+</td></tr>
+
+<tr bgcolor="CCCCCC" align="center"><td colspan=3> <input size=10 type="button" name="submit" value="Display Image" onClick="load_image(this.form)"></td></tr>
+
+<tr bgcolor="DDDDDD"><td colspan=3><br>
+<center><a href=mailto:ho-chun.huang@noaa.gov>Send Comments 
+</td>
+
+</form>
+
+<p style="color:black;background-color:LightSkyBlue;text-align:center;font-size:1.0em;margin-top:-2px;margin-left:120px;margin-right:170px" ><b>Disclaimer:</b> The content provided on this page supports model development. These are not official NWS products and should not to be relied upon for operational purposes. This web site is not subject to 24/7 support, and thus may be unavailable during system outages.</p>
+<!--  <P><left><font color=blue size=+0> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Click Optiond from Product Type Menu for Hourly output or Daily max/ave.</font> <br>  -->
+<font color=red size=+1> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Use ctrl and "+" or "-" keys to adjust figure size. Figures will rearrange themselve automatically.</font></P>
+<font color=blue > &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp The operational AQMv6 is denoted as "CMAQ PROD" and the developmental AQMv7 is denoted as "Online-CMAQ V70C55" for AQMv7.0 code version 55.</font></P>
+
+</table>
+
+</body>
+</html>
+

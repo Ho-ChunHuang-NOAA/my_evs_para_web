@@ -3,10 +3,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>AQMHomepage</title>
-<link rel="stylesheet" type="text/css" href="main.css">
-<script src="jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="functions.js"></script>
+<title>AQMv7 Homepage</title>
+<link rel="stylesheet" type="text/css" href="https://www.emc.ncep.noaa.gov/users/verification/air_quality/cmaq/para/loops/main.css">
+<script src="https://www.emc.ncep.noaa.gov/users/verification/air_quality/cmaq/para/loops/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="https://www.emc.ncep.noaa.gov/users/verification/air_quality/cmaq/para/loops/functions.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -55,19 +55,19 @@
 </div>
 
 
-<div id="loading"><img style="width:100%" src="loading.png"></div>
+<div id="loading"><img style="width:100%" src="https://www.emc.ncep.noaa.gov/users/verification/air_quality/cmaq/para/loops/loading.png"></div>
 
 
 <body>
 <div id="pageContents">
 <center>
-<img src="../../../../style/images/ncep_logo.gif" alt="" width="150" />
+<img src="https://www.emc.ncep.noaa.gov/users/verification/style/images/ncep_logo.gif" alt="" width="150" />
 <br>
 <br>
 The NCEP regional air quality modeling (AQM) system combines current knowledge of atmospheric science and air quality modeling with multi-processor computing techniques to deliver fast, technically sound estimates of ozone (O<sub>3</sub>) and particulate matter (PM<sub>2.5</sub>).
 <br>
 <br>
-<a style="color:#ff0000">This webpage provides information on <u>operational and developmental AQM forecast skill</u>.
+<a style="color:#ff0000">This webpage provides information on <u>operational and developmental AQM forecast graphics</u>.
 <br>
 Please use the links on the left to navigate to AQM verification statistics.</a> 
 <br>

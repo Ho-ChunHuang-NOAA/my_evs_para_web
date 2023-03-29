@@ -148,17 +148,24 @@ function getURL(annual,domain,variable,mtype,initcyc,fcstday,frame){
 	/* var newurl = url.replace("VVV",variable); */
 	var newurl = url.replace("DDD",domain);
 	if ( mtype == "MEDL" || mtype == "RMSEDL" ) {
-		fcstday = "DAY3";
+	    fcstday = "DAY3";
 	}
-	if ( annual == "202009" ) {
-                newurl = newurl.replace("AA","2020");
+	/* if ( annual == "202009" ) {
+            newurl = newurl.replace("AA","2020");
 	}
 	if ( annual == "202207" || annual == "202208" || annual == "202212" || annual == "2022sum" ) {
-                newurl = newurl.replace("AA","2022");
+            newurl = newurl.replace("AA","2022");
 	}
 	if ( annual == "202301" || annual == "2023win" ) {
-                newurl = newurl.replace("AA","2023");
+            newurl = newurl.replace("AA","2023");
 	}
+	if ( annual == "202302" ) {
+            var yearextract=annual.slice(0,4);
+            newurl = newurl.replace("AA",yearextract);
+	} */
+        var yearextract=annual.slice(0,4);
+        newurl = newurl.replace("AA",yearextract);
+
 	newurl = newurl.replace("VVV",variable);
 	newurl = newurl.replace("MMM",mtype);
         newurl = newurl.replace("FDY",fcstday);
