@@ -368,6 +368,10 @@ annuals.push({
         displayName: "2023 March",
         name: "202303",
 });
+annuals.push({
+        displayName: "2023 April",
+        name: "202304",
+});
 
 
 initcycs.push({
