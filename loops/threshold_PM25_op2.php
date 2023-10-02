@@ -346,16 +346,8 @@ annuals.push({
         name: "202301",
 });
 annuals.push({
-        displayName: "2023 February",
-        name: "202302",
-});
-annuals.push({
-        displayName: "2023 March",
-        name: "202303",
-});
-annuals.push({
-        displayName: "2023 April",
-        name: "202304",
+        displayName: "2023 September",
+        name: "202309",
 });
 
 

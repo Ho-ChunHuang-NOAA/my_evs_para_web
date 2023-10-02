@@ -1,7 +1,7 @@
 function LatestDay() {
    var yr=2023;
-   var mon=7;
-   var day=16;
+   var mon=9;
+   var day=30;
    var jday=dayofyear(yr, mon, day);
    var UpperLimit=1000*yr+jday;
    var status=save_latest_date(yr,mon,day);
